@@ -1,2 +1,2 @@
-# webpack-node
-webpack 学习笔记
+# webpack-note
+
