@@ -1,5 +1,9 @@
 # 目录
 
+[热模块](re-mo-kuai.md)
+
+[图片处理](tu-pian-chu-li.md)
+
 [webpack概念](shen-me-shi-webpack-wei-shen-me-shi-yong-ta.md)
 
 [webpack基本配置](ji-ben-pei-zhi.md)
@@ -9,3 +13,4 @@
 [转化es6语法](zhuan-hua-es6-yu-fa.md)
 
 学习中。。。。。
+

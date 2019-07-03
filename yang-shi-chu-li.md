@@ -19,10 +19,10 @@ postcss-loader：给样式添加浏览器前缀
 
 
 
-```text
-需要注意是：
-loader是有顺序的，webpack肯定是先将所有css模块依赖解析完得到计算结果再创建style标签。
-因此应该把style-loader放在css-loader的前面（webpack loader的执行顺序是从右到左）。
+```javascript
+// 需要注意是：
+// loader是有顺序的，webpack肯定是先将所有css模块依赖解析完得到计算结果再创建style标签。
+// 因此应该把style-loader放在css-loader的前面（webpack loader的执行顺序是从右到左）。
 module.exports = {
   module: {
     rules: [
@@ -41,7 +41,7 @@ module.exports = {
 
 
 
-```text
+```javascript
 index.js
 
 require('../css/index.css')   
@@ -52,11 +52,11 @@ import '../css/index.css'
 
 
 
-```text
+```javascript
 mini-css-extract-plugin  //CSS 代码块提取单独的css文件
 
 npm install --save-dev  mini-css-extract-plugin 安装
---save-dev(自动写入package.json文件)
+//--save-dev(自动写入package.json文件)
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 

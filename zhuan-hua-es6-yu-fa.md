@@ -10,11 +10,11 @@ npm install -D babel-loader @babel/core @babel/preset-env  //安装 3个babel
 
 ## 用法
 
-```text
+```javascript
 module: {
   rules: [
     {
-      test: /\.m?js$/,
+      test: /\.m?js$/, // 匹配js文件
       exclude: /(node_modules|bower_components)/,//排除 node_modules|bower_components 这两个文件的js
       use: {
         loader: 'babel-loader',
@@ -26,4 +26,6 @@ module: {
   ]
 }
 ```
+
+
 
