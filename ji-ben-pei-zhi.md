@@ -4,7 +4,7 @@
 
 ```text
 npm install --save-dev -D webpack
-npm install --save-dev -D webpack-cli
+npm install --save-dev -D webpack-cli运行
 ```
 
 ### 配置
@@ -18,8 +18,8 @@ module.exports = {
  mode: 'production'// development production  生产环境和开发环境 （启用不同插件，开发环境代码可读，生产环境代码不可读）
   entry: './path/to/my/entry/file.js',//入口配置
   output: {//出口配置
-    path: path.resolve(__dirname, 'dist'),//配置出口文件目录
-    filename: 'my-first-webpack.bundle.js'//出口文件名称
+    path: path.resolve(__dirname, 'dist'),///打包后的文件存放的地方
+    filename: 'my-first-webpack.bundle.js'//打包后的文件名称
   }
 
   module: {
@@ -34,5 +34,11 @@ module.exports = {
 };
 ```
 
+### 运行
 
+```text
+webpack  （默认运行webpack.config.js 或者 webpackfile.js）
+webpack  --config build.js // --config 后面可以根上参数  指定webpack读取的配置文件  
+
+```
 
