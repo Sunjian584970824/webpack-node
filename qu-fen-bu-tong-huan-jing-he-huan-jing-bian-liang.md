@@ -136,5 +136,6 @@ plugins: [
     new webpack.DefinePlugin({
         DEV: JSON.stringify('dev') // 将DEV暴露为全局值为字符串‘dev’
     })
+    
 ```
 
