@@ -1,4 +1,21 @@
-# source-map与多页应用打包
+# 跨域、source-map，多页应用打包
+
+**跨域**
+
+前后端分离，在前段服务于后端服务进行接口交互的时候，会出现跨域现象
+
+```javascript
+   devServer: {
+        port: 3000,
+        open: true,
+        contentBase: './webpack/dist/index.html',
+        host: 'localhost',
+        hot: true,
+        proxy: { // webpack-dev-server 的该属性可以进行代理
+            '/api': "http://localhost:8080" // 代理地址，跨域
+        }
+    },
+```
 
 **source-map**
 
