@@ -1,4 +1,4 @@
-# 跨域、source-map，多页应用打包
+# 跨域、source-map，多页应用打包、
 
 **跨域**
 
@@ -21,7 +21,7 @@
 
 source-map 可以在开发的过程当中映射你的源码，而非你被webpack编译后的代码，方便调试。
 
-```text
+```javascript
 npm i -D source-map-loader
 
 devtool: "source-map", 
@@ -60,7 +60,8 @@ const getEntry = function() {
         entryArry[files[key]] = filesName[key]
         htmlPlugins.push(new HtmlWebpackPlugin({ // 打包生成html文件并自动引入对应的资源文件
             filename: files[key] + '/index.html', //生成的文件名 默认index.html
-            template: './src/index.html', //生成文件的模板
+            template: './src/index.html', //生成文件的模板,
+            chunks:[ files[key]] // 根据不同入口，引入不同的js
         }))
     });
 }
