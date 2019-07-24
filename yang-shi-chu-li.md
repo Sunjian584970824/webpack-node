@@ -31,7 +31,18 @@ module.exports = {
         use: [
           'style-loader',
           { loader: 'css-loader', options: { insertAt: 'top' } }, //  在给定位置处插入 <style></style> 默认 botttom
-          'postcss-loader'
+          {
+                        loader: 'postcss-loader',
+                        options: {
+                            ident: 'postcss',
+                            plugins: (loader) => [
+                                require('postcss-import')({ root: loader.resourcePath }),//路径解析
+                                require('postcss-cssnext')(),//下一版本语法
+                                require("autoprefixer")(),//前缀
+                                require('cssnano')() // 压缩
+                            ]
+                        }
+                    },
         ]
       }
     ]
